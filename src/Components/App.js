@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 import { Route, Link, Switch } from 'react-router-dom';
+import formSchema from '../Validation/FormSchema';
 import * as yup from 'yup';
 import axios from 'axios';
 
@@ -48,6 +49,7 @@ const initialDisabled = true;
   // Setting into state user variable for array of order info which will change on successful form submissions
   const [order, setOrder] = useState({});
   */
+
   // Setting form values object into state
   const [formValues, setFormValues] = useState(initialFormValues);
   // Setting object containing different form field errors into state
@@ -76,7 +78,7 @@ const initialDisabled = true;
     // Using yup.reach to use the defined schema to test individual parts of the form for validation
     // It takes the schema as the first argument, and the key to be tested as the second argument
     yup
-      .reach(schema, name) 
+      .reach(formSchema, name) 
       .validate(value)
       // Clears error if validation is successful
       .then(() => {
@@ -113,7 +115,7 @@ const initialDisabled = true;
   // Employing an effect hook to validate the form each time it is updated allowing for the submit button to be enabled once the form is completely valid
   useEffect(() => {
     
-    schema.isValid(formValues).then(valid => {
+    formSchema.isValid(formValues).then(valid => {
       setDisabled(!valid);
     });
   }, [formValues])
