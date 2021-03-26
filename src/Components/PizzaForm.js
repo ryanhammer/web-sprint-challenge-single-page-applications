@@ -19,7 +19,7 @@ export default function PizzaForm(props) {
   return (
     <main className='form-container'>
       <h3>Build Your Own Pizza</h3>
-      <img url='../Assets/Pizza.jpg'></img>
+      <img src='./Assets/Pizza.jpg'/>
       <h2 id='form-title'>Build Your Own Pizza</h2>
       <form className='order-form' onSubmit={onSubmit}>
 
@@ -29,12 +29,14 @@ export default function PizzaForm(props) {
         </section>
 
         <section className='form-item'>
-          <input
-              value={values.name}
-              onChange={onChange}
-              name='name'
-              type='text'
-          />
+          <label>Name:
+            <input
+                value={values.name}
+                onChange={onChange}
+                name='name'
+                type='text'
+            />
+          </label>
         </section>
 
         {/* Dropdown menu for pizza size selection */}
@@ -44,19 +46,20 @@ export default function PizzaForm(props) {
         </section>
 
         <section className='form-item'>
-          <select
-            onChange={onChange}
-            value={values.size}
-            name='size'
-          >
 
-            <option value=''>- Select an option -</option>
-            <option value='Small'>Small</option>
-            <option value='Medium'>Medium</option>
-            <option value='Large'>Large</option>
-            <option value='X-Large'>X-Large</option>
-
-          </select>
+          <label>Choose a Pizza Size: 
+            <select
+              onChange={onChange}
+              value={values.size}
+              name='size'
+            >
+              <option value=''>- Select an option -</option>
+              <option value='Small'>Small</option>
+              <option value='Medium'>Medium</option>
+              <option value='Large'>Large</option>
+              <option value='X-Large'>X-Large</option>
+            </select>
+          </label>
 
         </section>
 
@@ -66,8 +69,8 @@ export default function PizzaForm(props) {
           <p>Required</p>
         </section>
 
-        <section className='form-item'>
-          <label>Original Red
+        <section className='form-item' >
+          <label className='sauce-selection'>Original Red
             <input
               type='radio'
               name='sauce'
@@ -77,7 +80,7 @@ export default function PizzaForm(props) {
             />
           </label>
 
-          <label>Garlic Ranch
+          <label className='sauce-selection'>Garlic Ranch
           <input
               type='radio'
               name='sauce'
@@ -87,7 +90,7 @@ export default function PizzaForm(props) {
             />
           </label>
 
-          <label>BBQ Sauce
+          <label className='sauce-selection'>BBQ Sauce
             <input
               type='radio'
               name='sauce'
@@ -97,7 +100,7 @@ export default function PizzaForm(props) {
             />
           </label>
 
-          <label>Spinach Alfredo
+          <label className='sauce-selection'>Spinach Alfredo
           <input
               type='radio'
               name='sauce'
@@ -114,7 +117,7 @@ export default function PizzaForm(props) {
           <p>(Optional) Choose up to 8</p>
         </section>
 
-        <section className='topping-selection form-item'>
+        <section className='topping-selection'>
 
           <section className='topping-list'>
             <label>Extra Cheese

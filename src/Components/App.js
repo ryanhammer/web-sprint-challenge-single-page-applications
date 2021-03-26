@@ -60,8 +60,9 @@ const initialDisabled = true;
   const postNewOrder = newOrder => {
 
     // Using axios to post successfully submitted form with new order data to backend location
+    console.log(newOrder);
     axios
-      .post(`https://reqres.in/`, newOrder)
+      .post('https://reqres.in/', newOrder)
         .then((res) => {
           // If post is successful, log order data to the console
           console.log(res.data);
