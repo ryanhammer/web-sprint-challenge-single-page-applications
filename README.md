@@ -31,8 +31,13 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
-1. How would you explain form validation to someone who has never programmed before?
-1. In 1-2 sentences, define end to end testing.
+  -useRouteMatch gives access to the 'Match' component without rendering a <Route> component
+
+2. How would you explain form validation to someone who has never programmed before?
+  -Form validation is a method that developers can use to ensure that users interact with a form in the desired way before trying to submit with incomplete or incorrect information.
+
+3. In 1-2 sentences, define end to end testing.
+  -End to end testing is a method of testing applications that tests all facets of the user experience. This includes static elements and their appearance as well as the dynamic ways a user might interact with an application and how the app responds.
 
 ## Instructions
 
@@ -62,9 +67,9 @@ Your finished project must include all of the following requirements:
 
 Implement the following tests in Cypress:
 
-- [ ] test that you can add text to the box
-- [ ] test that you can select multiple toppings
-- [ ] test that you can submit the form
+- [x] test that you can add text to the box
+- [x] test that you can select multiple toppings
+- [x] test that you can submit the form
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
