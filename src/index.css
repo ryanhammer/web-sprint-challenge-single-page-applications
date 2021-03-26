@@ -128,3 +128,6 @@ select {
   flex-direction: column;
 }
 
+.errors-section {
+  color: red;
+}
