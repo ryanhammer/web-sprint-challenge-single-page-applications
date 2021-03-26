@@ -11,3 +11,61 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1, h2, h3 {
+  color: darkblue;
+}
+
+h1 {
+  margin-left: 5rem;
+  font-size: 3rem;
+}
+
+#home-heading {
+  font-size: 2.5rem;
+  color: #010328;
+  font-weight:1500;
+}
+
+.app-header {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.nav-menu {
+  margin-right: 3rem;
+}
+.nav-menu button {
+  width: 6rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+  background-color: darkblue;
+  color: whitesmoke;
+  font-size: 1rem;
+  margin-right: 2rem;
+}
+
+.home-wrapper {
+  background-image: url('./Assets/Pizza.jpg');
+  opacity: 0.8;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#pizza-button {
+  text-align: center;
+  background-color: whitesmoke;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  color: #010328;
+  height: 2.5rem;
+  width: 8rem;
+  border-radius: 0.5rem;
+  margin-top: 10rem;
+  opacity: 1.25;
+}
