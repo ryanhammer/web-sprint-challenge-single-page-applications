@@ -69,3 +69,7 @@ h1 {
   margin-top: 10rem;
   opacity: 1.25;
 }
+
+#form-title {
+  text-align: left;
+}
